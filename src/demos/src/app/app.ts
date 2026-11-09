@@ -1,12 +1,20 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { PageHeader } from './widgets/page-header';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [PageHeader],
   selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
+  template: `
+    <app-page-header />
+    <main class="container mx-auto">
+      <p>App Stuff goes here {{ title() }}</p>
+    </main>
+  `,
 })
 export class App {
   protected readonly title = signal('demos');
+
+  doYourThing() {
+    this.title.update((title) => title.toUpperCase());
+  }
 }

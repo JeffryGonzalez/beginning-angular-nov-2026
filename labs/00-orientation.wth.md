@@ -4,6 +4,9 @@
 
 - Installed globally on a machine
     - Can be good and bad - bad if you need multiple versions (ERO, etc.)
+        - tools to help with versions of global things and even node, npm
+            - "Node Version Manager" (nvm)
+            - Volta.sh 
 - Each project gets a "copy" of it, too.
 
 `ng --help` can get you going.
