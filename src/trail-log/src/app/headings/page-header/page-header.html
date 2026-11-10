@@ -1,0 +1,16 @@
+<header class="navbar bg-base-100 shadow-sm">
+  <app-mast-head />
+
+  <nav class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      @for (linky of links(); track linky.href) {
+        <li>
+          <a [href]="linky.href" target="_blank"
+            >{{ linky.linkText }}
+            <app-external-link />
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</header>

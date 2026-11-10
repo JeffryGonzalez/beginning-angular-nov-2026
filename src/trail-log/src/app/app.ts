@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { PageHeader } from './headings/page-header/page-header';
+import { TrailCard } from './trails/trail-card';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [PageHeader, TrailCard],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

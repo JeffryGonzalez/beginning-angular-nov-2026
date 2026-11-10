@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { PageHeader } from './widgets/page-header';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [PageHeader],
+  imports: [PageHeader, RouterOutlet],
   selector: 'app-root',
   template: `
     <app-page-header />
+
     <main class="container mx-auto">
-      <p>App Stuff goes here {{ title() }}</p>
+      <router-outlet />
     </main>
   `,
 })

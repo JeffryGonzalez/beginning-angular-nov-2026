@@ -1,14 +1,15 @@
 import { Component, input, signal } from '@angular/core';
 import { Link } from './types';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header-links',
-  imports: [],
+  imports: [RouterLink],
   template: `
     <ul [class]="kind() === 'horizontal' ? horizontalClasses : dropDownClasses">
       @for (link of links(); track link.link) {
         <li>
-          <a href="{{ link.link }}">{{ link.title }}</a>
+          <a [routerLink]="link.link">{{ link.title }}</a>
         </li>
       }
     </ul>

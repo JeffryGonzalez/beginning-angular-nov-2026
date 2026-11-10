@@ -30,7 +30,7 @@ export class PageHeader {
   private readonly myLinks = signal<Link[]>([
     {
       title: 'Home',
-      link: '',
+      link: 'home',
     },
     {
       title: 'State',
