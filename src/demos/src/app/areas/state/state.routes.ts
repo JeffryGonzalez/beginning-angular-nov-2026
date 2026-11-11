@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { State } from './state';
 import { Home } from './pages/home';
+import { Prefs } from './pages/prefs';
 
 export const stateRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ export const stateRoutes: Routes = [
       {
         path: 'signals',
         loadComponent: () => import('./pages/signals').then((p) => p.Signals),
+      },
+      {
+        path: 'prefs',
+        component: Prefs,
       },
       {
         path: '**',

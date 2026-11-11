@@ -18,6 +18,12 @@ import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
         routerLink="signals"
         >Signals</a
       >
+      <a
+        [routerLinkActive]="['text-bold', 'underline']"
+        class="btn btn-sm btn-primary"
+        routerLink="prefs"
+        >Prefs</a
+      >
     </div>
     <div class="p-4">
       <router-outlet />
