@@ -75,7 +75,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "trails",
+      "endpoint": "api/trails",
       "responses": [
         {
           "uuid": "acb95a14-bbac-40af-9da1-d1685e3d540f",
@@ -106,7 +106,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "trails",
+      "endpoint": "api/trails",
       "responses": [
         {
           "uuid": "22389bba-35c2-48e3-baa9-e62cef4b7649",
@@ -118,6 +118,37 @@
           "bodyType": "DATABUCKET",
           "filePath": "",
           "databucketID": "plwz",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "7189322b-a93c-4745-ae63-7215ed25c96e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/trails",
+      "responses": [
+        {
+          "uuid": "4587e5b9-a760-442a-b43f-54490c8de37e",
+          "body": "[]",
+          "latency": 3000,
+          "statusCode": 200,
+          "label": "no trails",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
           "sendFileAsBody": false,
           "rules": [],
           "rulesOperator": "OR",
@@ -149,6 +180,10 @@
     {
       "type": "route",
       "uuid": "8010aa58-1a5c-4517-9279-89911fd80a26"
+    },
+    {
+      "type": "route",
+      "uuid": "7189322b-a93c-4745-ae63-7215ed25c96e"
     }
   ],
   "proxyMode": false,

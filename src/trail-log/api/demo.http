@@ -1,6 +1,6 @@
 ### Get all trails
 
-GET http://localhost:3001/trails
+GET http://localhost:3001/api/trails
 
 
 ### Get user favorites

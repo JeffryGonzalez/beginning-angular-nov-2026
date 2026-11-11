@@ -1,7 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { httpResource } from '@angular/common/http';
 import { Component } from '@angular/core';
-
+import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-state-resources',
   imports: [],
@@ -18,6 +18,6 @@ import { Component } from '@angular/core';
 })
 export class Resources {
   private readonly postResource = httpResource<{ id: string; title: string }[]>(
-    () => 'https://jsonplaceholder.typicode.com/posts',
+    () => environment.postUrl,
   );
 }

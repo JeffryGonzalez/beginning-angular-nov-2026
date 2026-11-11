@@ -1,10 +1,8 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
+import { TrailsStore } from './trails/trails-store';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
-  ]
+  providers: [TrailsStore, provideBrowserGlobalErrorListeners(), provideRouter(routes)],
 };
