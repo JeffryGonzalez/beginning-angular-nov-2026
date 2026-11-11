@@ -18,6 +18,7 @@ import { Trail } from './types';
           <div class="stat-title">Level</div>
           <div class="stat-value">
             <span
+              class="text-[1.3rem]"
               [class.text-success]="trail().difficulty === 'easy'"
               [class.text-info]="trail().difficulty === 'moderate'"
               [class.text-warning]="trail().difficulty === 'hard'"
@@ -31,7 +32,7 @@ import { Trail } from './types';
         <label
           class="label"
           [class.text-success]="trail().favorite"
-          [class.text-neutral]="!trail().favorite"
+          [class.text-accent]="!trail().favorite"
         >
           {{ trail().favorite ? 'Favorite!' : 'Mark as Favorite' }}
           <input
