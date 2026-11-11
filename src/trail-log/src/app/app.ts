@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 
 import { PageHeader } from './headings/page-header/page-header';
-import { TrailCard } from './trails/trail-card';
+import { TrailList } from './trails/trails-list';
 
 @Component({
-  imports: [PageHeader, TrailCard],
+  imports: [PageHeader, TrailList],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
