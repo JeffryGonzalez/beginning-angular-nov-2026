@@ -1,0 +1,20 @@
+### Get all trails
+
+GET http://localhost:3001/trails
+
+
+### Get user favorites
+
+GET http://localhost:3001/user/favorites
+
+
+### Add User Favorite
+
+POST http://localhost:3001/user/favorites
+Content-Type: application/json
+
+{
+  "id": "2ee2126b-7e81-490e-b8b5-4d941785b795",
+  "added": "2024-06-05T12:00:00Z"
+}
+

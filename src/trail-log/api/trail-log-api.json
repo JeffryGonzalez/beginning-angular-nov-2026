@@ -1,0 +1,214 @@
+{
+  "uuid": "df7a33a9-1b4a-4531-9695-7e257c91eb44",
+  "lastMigration": 33,
+  "name": "Trail log api",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "79c60968-e7aa-4605-b9aa-31278f372eea",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "b6f96806-ae4a-45b9-b438-798a1e24c10b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "85df2fb3-d33a-45dd-a064-6ee5a5065bf8",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "user/favorites",
+      "responses": [
+        {
+          "uuid": "46e00351-6379-4cb2-8ca7-5a53e0255794",
+          "body": "{}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "n053",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "8010aa58-1a5c-4517-9279-89911fd80a26",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "trails",
+      "responses": [
+        {
+          "uuid": "acb95a14-bbac-40af-9da1-d1685e3d540f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 405,
+          "label": "an error response",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "db9e4fba-d94e-41fb-9465-d491dbd8ff53",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "trails",
+      "responses": [
+        {
+          "uuid": "22389bba-35c2-48e3-baa9-e62cef4b7649",
+          "body": "{}",
+          "latency": 200,
+          "statusCode": 200,
+          "label": "A good response",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "plwz",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "79c60968-e7aa-4605-b9aa-31278f372eea"
+    },
+    {
+      "type": "route",
+      "uuid": "85df2fb3-d33a-45dd-a064-6ee5a5065bf8"
+    },
+    {
+      "type": "route",
+      "uuid": "db9e4fba-d94e-41fb-9465-d491dbd8ff53"
+    },
+    {
+      "type": "route",
+      "uuid": "8010aa58-1a5c-4517-9279-89911fd80a26"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "5eb6574a-7bf3-4d76-b4ac-103cd272179d",
+      "id": "plwz",
+      "name": "trails",
+      "documentation": "",
+      "value": "[\n  {\n    \"id\": \"20e2126b-7e81-490e-b8b5-4d941785b795\",\n    \"name\": \"Woodpecker Way Loop\",\n    \"miles\": 1.8,\n    \"difficulty\": \"easy\"\n  },\n  {\n    \"id\": \"44ac4b00-c48d-4e0e-893e-2497119881cb\",\n    \"name\": \"Eagle Rock Trail\",\n    \"miles\": 3.2,\n    \"difficulty\": \"moderate\"\n  },\n  {\n    \"id\": \"dc59b0f6-73c3-4392-815f-8b45c32f8af7\",\n    \"name\": \"Bear Creek Trail\",\n    \"miles\": 2.5,\n    \"difficulty\": \"hard\"\n  },\n  {\n    \"id\": \"a1b2c3d4-e5f6-7890-abcd-ef1234567890\",\n    \"name\": \"Cedar Ridge Trail\",\n    \"miles\": 4.1,\n    \"difficulty\": \"extreme\"\n  },\n  {\n    \"id\": \"b1c2d3e4-f5a6-7890-bcde-f1234567890\",\n    \"name\": \"Pine Valley Trail\",\n    \"miles\": 5.0,\n    \"difficulty\": \"moderate\"\n  }\n]\n"
+    },
+    {
+      "uuid": "c163ce9a-7a92-41f0-94ca-4d253a1e5852",
+      "id": "n053",
+      "name": "user-favorites",
+      "documentation": "",
+      "value": "[\n { \"id\": \"dc59b0f6-73c3-4392-815f-8b45c32f8af7\", \"added\": \"2026-11-11T18:10:07.206Z\"}\n]"
+    }
+  ],
+  "callbacks": []
+}
