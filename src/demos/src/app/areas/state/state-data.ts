@@ -11,6 +11,7 @@ export class StateData {
   public readonly by = this._by.asReadonly();
   // methods
   public setBy(val: ByVals) {
+    // oh, send this to an API, or something.
     this._by.set(val);
   }
   increment() {

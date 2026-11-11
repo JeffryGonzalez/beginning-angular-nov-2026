@@ -1,7 +1,9 @@
 import { computed, Service, signal } from '@angular/core';
 import { Trail, TrailDifficulty } from './types';
 
-@Service()
+@Service() // can only use this on a class, and it means that you do not have to add this to any providers in your app.
+// it will be automatically provided "globally" on first use.
+// It also means you can't use constructor injection, because you shouldn't but ESLint already prevents that.
 export class TrailsData {
   private readonly trailList = signal<Trail[]>([
     {

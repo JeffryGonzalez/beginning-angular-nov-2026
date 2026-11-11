@@ -1,11 +1,12 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { StateData } from '../state-data';
+import { StateStore } from '../state-store';
 
 @Component({
   selector: 'app-counter-fizzbuzz',
   imports: [],
   template: `
-    @let val = fizzBuzz();
+    @let val = service.fizzBuzz();
     @switch (val) {
       @case ('Fizz') {
         <p>It is just fizz meaning it is divisible by 3</p>
@@ -29,22 +30,6 @@ import { StateData } from '../state-data';
   styles: ``,
 })
 export class FizzBuzz {
-  private readonly service = inject(StateData);
+  private readonly service = inject(StateStore);
   winnerMessage = input('Yay Fizzbuzz');
-  fizzBuzz = computed(() => {
-    const current = this.service.current();
-    if (current === 0) {
-      return 'Zero';
-    }
-    if (current % 3 === 0 && current % 5 === 0) {
-      return 'FizzBuzz';
-    }
-    if (current % 3 === 0) {
-      return 'Fizz';
-    }
-    if (current % 5 === 0) {
-      return 'Buzz';
-    }
-    return '';
-  });
 }

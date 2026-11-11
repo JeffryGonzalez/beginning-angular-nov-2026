@@ -1,11 +1,12 @@
+import { TitleCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TrailsData } from './trails-data';
 import { DifficultyLevel } from './types';
-import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-trails-display-options',
   imports: [TitleCasePipe],
+  providers: [],
   template: `
     <div class="flex flex-row gap-2">
       <form class="filter">

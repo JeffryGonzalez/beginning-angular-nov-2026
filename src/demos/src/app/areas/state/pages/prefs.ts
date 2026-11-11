@@ -1,8 +1,9 @@
-import { Component, inject, signal } from '@angular/core';
-import { StateData } from '../state-data';
+import { Component, inject } from '@angular/core';
+import { StateStore } from '../state-store';
 
 @Component({
   selector: 'app-prefs',
+  providers: [],
   imports: [],
   template: `
     <div class="join">
@@ -20,5 +21,5 @@ import { StateData } from '../state-data';
   styles: ``,
 })
 export class Prefs {
-  private readonly service = inject(StateData);
+  private readonly service = inject(StateStore);
 }

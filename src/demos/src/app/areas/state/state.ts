@@ -24,6 +24,12 @@ import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
         routerLink="prefs"
         >Prefs</a
       >
+      <a
+        [routerLinkActive]="['text-bold', 'underline']"
+        class="btn btn-sm btn-primary"
+        routerLink="resources"
+        >Resources</a
+      >
     </div>
     <div class="p-4">
       <router-outlet />

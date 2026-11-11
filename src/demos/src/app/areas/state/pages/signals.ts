@@ -1,6 +1,7 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FizzBuzz } from '../widgets/fizz-buzz';
 import { StateData } from '../state-data';
+import { StateStore } from '../state-store';
 
 @Component({
   selector: 'app-areas-state-pages-signals',
@@ -16,7 +17,7 @@ import { StateData } from '../state-data';
   styles: ``,
 })
 export class Signals {
-  private readonly service = inject(StateData);
+  private readonly service = inject(StateStore);
 
   msg = signal('Winner winner chicken dinner!');
 }
