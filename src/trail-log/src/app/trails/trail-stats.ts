@@ -6,7 +6,7 @@ import { TitleCasePipe } from '@angular/common';
   selector: 'app-trail-stats',
   imports: [TitleCasePipe],
   template: `
-    <div class="stats stats-vertical shadow">
+    <div class="stats lg:stats-vertical stats-horizontal shadow">
       <div class="stat">
         <div class="stat-title text-accent">Total Miles of Trails</div>
         <div class="stat-value text-secondary">{{ trailStats().totalMiles }}</div>
