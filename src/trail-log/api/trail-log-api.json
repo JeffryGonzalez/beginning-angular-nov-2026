@@ -162,6 +162,68 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "948bc44f-991b-4406-9882-51745da1cc32",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "api/trails",
+      "responses": [
+        {
+          "uuid": "48bfa7db-bc98-474e-af83-4117ac436e4c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "plwz",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "783d7996-eb4a-439e-8e92-db06f0e19eb7",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "api/user/reviews",
+      "responses": [
+        {
+          "uuid": "217a5785-e78f-412e-b3fe-201cdb3ce0db",
+          "body": "{}",
+          "latency": 3000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "ngq2",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -175,6 +237,10 @@
     },
     {
       "type": "route",
+      "uuid": "948bc44f-991b-4406-9882-51745da1cc32"
+    },
+    {
+      "type": "route",
       "uuid": "db9e4fba-d94e-41fb-9465-d491dbd8ff53"
     },
     {
@@ -184,6 +250,10 @@
     {
       "type": "route",
       "uuid": "7189322b-a93c-4745-ae63-7215ed25c96e"
+    },
+    {
+      "type": "route",
+      "uuid": "783d7996-eb4a-439e-8e92-db06f0e19eb7"
     }
   ],
   "proxyMode": false,
@@ -243,6 +313,13 @@
       "name": "user-favorites",
       "documentation": "",
       "value": "[\n { \"id\": \"dc59b0f6-73c3-4392-815f-8b45c32f8af7\", \"added\": \"2026-11-11T18:10:07.206Z\"}\n]"
+    },
+    {
+      "uuid": "9bb41d1c-265b-4776-8135-5a165592ad50",
+      "id": "ngq2",
+      "name": "reviews",
+      "documentation": "",
+      "value": "[\n]"
     }
   ],
   "callbacks": []

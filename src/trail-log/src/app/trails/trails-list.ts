@@ -3,9 +3,11 @@ import { DisplayOptionsButton } from './display-options-button';
 import { TrailCard } from './trail-card';
 import { TrailStats } from './trail-stats';
 import { TrailsStore } from './trails-store';
+import { ExpensiveService } from '../dev/expensive-service';
 
 @Component({
   selector: 'app-trails-list',
+  providers: [],
   imports: [TrailStats, TrailCard, DisplayOptionsButton],
   template: `
     @if (trailsData.trailsResource.isLoading()) {
@@ -32,5 +34,6 @@ import { TrailsStore } from './trails-store';
   styles: ``,
 })
 export class TrailList {
+  private readonly svc = inject(ExpensiveService);
   private readonly trailsData = inject(TrailsStore);
 }

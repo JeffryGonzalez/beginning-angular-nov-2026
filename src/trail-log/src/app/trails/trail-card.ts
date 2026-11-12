@@ -2,13 +2,15 @@ import { TitleCasePipe } from '@angular/common';
 import { Component, computed, inject, input } from '@angular/core';
 import { Trail } from './types';
 import { TrailsStore } from './trails-store';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-trails-trail-card',
-  imports: [TitleCasePipe],
+  imports: [TitleCasePipe, RouterLink],
   template: `
     <div class="card-body">
       <h2 class="card-title text-secondary">{{ trail().name }}</h2>
+
       <div class="stats stats-vertical lg:stats-horizontal shadow">
         <div class="stat">
           <div class="stat-title">Miles</div>
@@ -30,6 +32,11 @@ import { TrailsStore } from './trails-store';
         </div>
       </div>
       <div class="card-actions justify-end">
+        <a
+          class="btn btn-primary btn-xs text-primary-content"
+          [routerLink]="['reviews', trail().id]"
+          >Review! A Thing</a
+        >
         @if (store.trailsFavorites.isLoading() || inFlight()) {
           <span class="loading loading-ring loading-xl"></span>
         } @else {

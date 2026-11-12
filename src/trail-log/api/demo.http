@@ -2,7 +2,6 @@
 
 GET http://localhost:3001/api/trails
 
-
 ### Get user favorites
 
 GET http://localhost:3001/api/user/favorites

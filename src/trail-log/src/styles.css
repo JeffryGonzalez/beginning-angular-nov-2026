@@ -7,4 +7,39 @@
   a {
     @apply text-blue-600 dark:text-sky-400;
   }
+
+  /* // lee cooper effect */
+  button[aria-disabled='true'] {
+    background-color: color-mix(in oklab, var(--color-base-content) 15%, transparent);
+    color: color-mix(in oklab, var(--color-base-content) 59.1%, transparent);
+    position: relative;
+    overflow: hidden;
+  }
+
+  button[aria-disabled='true']::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 2px,
+        rgba(0, 0, 0, 0.15) 12px,
+        rgba(0, 0, 0, 0.15) 12px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+
+        transparent 0,
+
+        transparent 1px,
+
+        rgba(0, 0, 0, 0.15) 12px,
+
+        rgba(0, 0, 0, 0.15) 12px
+      );
+  }
 }
