@@ -4,6 +4,7 @@ import { Home } from './pages/home';
 import { Prefs } from './pages/prefs';
 import { StateStore } from './state-store';
 import { Resources } from './pages/resources';
+import { TheRest } from './pages/the-rest';
 
 export const stateRoutes: Routes = [
   {
@@ -28,6 +29,10 @@ export const stateRoutes: Routes = [
       {
         path: 'resources',
         component: Resources,
+      },
+      {
+        path: 'rest',
+        component: TheRest,
       },
 
       {

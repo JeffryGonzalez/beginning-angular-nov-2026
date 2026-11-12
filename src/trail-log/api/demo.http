@@ -11,7 +11,7 @@ Authorization: Bearer wueiruiw.wuiwueru.ueiuei
 
 ### Add User Favorite
 
-POST http://localhost:3001/api/user/favorites
+
 POST http://localhost:3001/api/user/favorites
 Content-Type: application/json
 
