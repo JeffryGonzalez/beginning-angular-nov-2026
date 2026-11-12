@@ -49,7 +49,7 @@
         {
           "uuid": "46e00351-6379-4cb2-8ca7-5a53e0255794",
           "body": "{}",
-          "latency": 1000,
+          "latency": 0,
           "statusCode": 200,
           "label": "",
           "headers": [],
@@ -111,7 +111,7 @@
         {
           "uuid": "22389bba-35c2-48e3-baa9-e62cef4b7649",
           "body": "{}",
-          "latency": 5000,
+          "latency": 0,
           "statusCode": 200,
           "label": "A good response",
           "headers": [],

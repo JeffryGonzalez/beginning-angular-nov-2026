@@ -10,3 +10,7 @@ export interface Trail {
 }
 
 export type ApiTrailItem = Omit<Trail, 'favorite'>;
+
+export type UserFavorite = {
+  id: string;
+};
