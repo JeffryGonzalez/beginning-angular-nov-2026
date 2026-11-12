@@ -1,14 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { DisplayOptions } from './display-options';
+import { DisplayOptionsButton } from './display-options-button';
 import { TrailCard } from './trail-card';
 import { TrailStats } from './trail-stats';
-import { TrailsData } from './trails-data';
 import { TrailsStore } from './trails-store';
-import { DisplayOptionsButton } from './display-options-button';
 
 @Component({
   selector: 'app-trails-list',
-  imports: [TrailStats, TrailCard, DisplayOptions, DisplayOptionsButton],
+  imports: [TrailStats, TrailCard, DisplayOptionsButton],
   template: `
     @if (trailsData.trailsResource.isLoading()) {
       <span class="loading loading-spinner text-primary"></span>

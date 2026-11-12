@@ -5,16 +5,21 @@ GET http://localhost:3001/api/trails
 
 ### Get user favorites
 
-GET http://localhost:3001/user/favorites
+GET http://localhost:3001/api/user/favorites
 
 
 ### Add User Favorite
 
-POST http://localhost:3001/user/favorites
+POST http://localhost:3001/api/user/favorites
 Content-Type: application/json
 
 {
-  "id": "2ee2126b-7e81-490e-b8b5-4d941785b795",
+  "id": "20e2126b-7e81-490e-b8b5-4d941785b795",
   "added": "2024-06-05T12:00:00Z"
 }
+
+
+### Delete a Favorite
+
+DELETE http://localhost:3001/api/user/favorites/b1c2d3e4-f5a6-7890-bcde-f1234567890
 

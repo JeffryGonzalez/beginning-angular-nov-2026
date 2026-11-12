@@ -44,12 +44,12 @@
       "type": "crud",
       "documentation": "",
       "method": "",
-      "endpoint": "user/favorites",
+      "endpoint": "api/user/favorites",
       "responses": [
         {
           "uuid": "46e00351-6379-4cb2-8ca7-5a53e0255794",
           "body": "{}",
-          "latency": 1000,
+          "latency": 0,
           "statusCode": 200,
           "label": "",
           "headers": [],
